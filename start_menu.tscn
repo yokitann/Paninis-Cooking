@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://giuvgy63u3b"]
+
+[sub_resource type="Theme" id="Theme_rqwai"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_dry5q"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_3dmgh"]
+default_font_size = 50
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -72.0
+offset_right = 325.0
+offset_bottom = 72.0
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_rqwai")
+text = "Panini's Cooking
+"
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_dry5q")
+text = "Start Game "
+
+[node name="EndGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dmgh")
+text = "End Game
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer2"]
+visible = false
+layout_mode = 2
+
+[node name="Title" type="Button" parent="MarginContainer2/CenterContainer"]
+layout_mode = 2
+text = "Panini's Cooking"
