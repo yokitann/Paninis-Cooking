@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3l6dvlqhhk70"]
+
+[ext_resource type="Texture2D" uid="uid://ch24q2t6w8elg" path="res://kitchen.png" id="1_5yudt"]
+[ext_resource type="PackedScene" uid="uid://brhye2vq7cjyr" path="res://player.tscn" id="2_n6i46"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Kitchen" type="Sprite2D" parent="."]
+position = Vector2(575.5, 324.5)
+scale = Vector2(3.62222, 2.58)
+texture = ExtResource("1_5yudt")
+
+[node name="Player" parent="." instance=ExtResource("2_n6i46")]
+position = Vector2(281, 304)
