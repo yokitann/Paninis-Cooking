@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv25by1t6gh0t"]
+
+[ext_resource type="Texture2D" uid="uid://dr0mmntgn4te1" path="res://Image/Remy.png" id="1_ve1l4"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RemysBody" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 995.0
+texture = ExtResource("1_ve1l4")
+
+[node name="Chat" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 12.826
+anchor_right = 28.835
+anchor_bottom = 15.959
+offset_left = 111.96
+offset_top = 159.0
+offset_right = -56.4
+offset_bottom = -431.36
+scale = Vector2(3, 3)
+text = "Helloooooooo"
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 25.016
+anchor_top = 13.805
+anchor_right = 28.3
+anchor_bottom = 16.008
+offset_left = -21.64
+offset_top = 17.8
+offset_right = -78.0
+offset_bottom = -39.3201
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+text = "Next
+"
