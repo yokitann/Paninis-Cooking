@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://brhye2vq7cjyr"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_qjpug"]
-[ext_resource type="Texture2D" uid="uid://c368ru3wasaf8" path="res://58987838cba9841eabab6184.png" id="2_kwcvj"]
+[ext_resource type="Texture2D" uid="uid://c368ru3wasaf8" path="res://Image/Miffy.png" id="2_kwcvj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5nqdf"]
 radius = 41.6083

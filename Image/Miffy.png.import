@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch24q2t6w8elg"
-path="res://.godot/imported/kitchen.png-f77adb2989db9031a8d024fe8f66ffb7.ctex"
+uid="uid://c368ru3wasaf8"
+path="res://.godot/imported/Miffy.png-e91c730d4e91b976da53038bc2695ee6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kitchen.png"
-dest_files=["res://.godot/imported/kitchen.png-f77adb2989db9031a8d024fe8f66ffb7.ctex"]
+source_file="res://Image/Miffy.png"
+dest_files=["res://.godot/imported/Miffy.png-e91c730d4e91b976da53038bc2695ee6.ctex"]
 
 [params]
 

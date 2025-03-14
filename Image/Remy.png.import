@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c368ru3wasaf8"
-path="res://.godot/imported/58987838cba9841eabab6184.png-dbcc7c8e4455e006d5ce99b0ea0ca863.ctex"
+uid="uid://dr0mmntgn4te1"
+path="res://.godot/imported/Remy.png-87d0b4500c1fe15794bf31a6a2be7ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://58987838cba9841eabab6184.png"
-dest_files=["res://.godot/imported/58987838cba9841eabab6184.png-dbcc7c8e4455e006d5ce99b0ea0ca863.ctex"]
+source_file="res://Image/Remy.png"
+dest_files=["res://.godot/imported/Remy.png-87d0b4500c1fe15794bf31a6a2be7ce1.ctex"]
 
 [params]
 

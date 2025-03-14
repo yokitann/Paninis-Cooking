@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3l6dvlqhhk70"]
+[gd_scene load_steps=4 format=3 uid="uid://b3l6dvlqhhk70"]
 
-[ext_resource type="Texture2D" uid="uid://ch24q2t6w8elg" path="res://kitchen.png" id="1_5yudt"]
+[ext_resource type="Texture2D" uid="uid://ch24q2t6w8elg" path="res://Image/kitchen.png" id="1_5yudt"]
 [ext_resource type="PackedScene" uid="uid://brhye2vq7cjyr" path="res://player.tscn" id="2_n6i46"]
+[ext_resource type="PackedScene" uid="uid://xf8bvbtmt27k" path="res://remy.tscn" id="3_1vict"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,3 +13,6 @@ texture = ExtResource("1_5yudt")
 
 [node name="Player" parent="." instance=ExtResource("2_n6i46")]
 position = Vector2(281, 304)
+
+[node name="Remy" parent="." instance=ExtResource("3_1vict")]
+position = Vector2(345, 114)
