@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqean8vu4k16j"]
+[gd_scene load_steps=5 format=3 uid="uid://xf8bvbtmt27k"]
 
 [ext_resource type="Script" path="res://remy.gd" id="1_oi7f1"]
 [ext_resource type="Texture2D" uid="uid://dr0mmntgn4te1" path="res://Image/Remy.png" id="1_q3o0i"]
