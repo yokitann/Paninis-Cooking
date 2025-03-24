@@ -22,6 +22,6 @@ func show_text() -> void:
 func _continue() -> void: 
 	current_index += 1 #move down from the dialogue 
 	if current_index == dialogue.size():
-		get_tree().quit
+		get_tree().quit()
 	else:
 		show_text()
