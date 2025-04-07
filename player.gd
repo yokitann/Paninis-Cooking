@@ -1,37 +1,34 @@
-class_name Player extends CharacterBody2D
+extends CharacterBody2D
 
-@onready var _character: Sprite2D = %Miffy
-@onready var _miffy: AnimatedSprite2D = %Miffy2
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
 
-const miffy_back = preload("res://Miffy_back.png")
-const miffy_front = preload("res://Miffy_front.png")
-const miffy_left = preload("res://Miffy_left_walk.png")
-const miffy_right = preload("res://Miffy_right.png")
+@onready var _animated_miffy = %Miffy
 
-const up_right = Vector2.UP + Vector2.RIGHT
-const up_left = Vector2.UP + Vector2.LEFT
-const down_right = Vector2.DOWN + Vector2.RIGHT 
-const down_left = Vector2.DOWN + Vector2.LEFT
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
-var speed := 400.0 
+	# Handle jump.
+	if Input.is_action_just_pressed("move_up") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
 
-func _physics_process(_delta: float) -> void:
-	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = speed * direction
-	#update_animation(direction)
+	
+	var direction := Input.get_axis("move_left", "move_right")
+	if direction > 0:
+		_animated_miffy.flip_h = false
+	elif direction < 0:
+		_animated_miffy.flip_h = true
+	
+	if direction == 0:
+		_animated_miffy.play("front")
+	else:
+		_animated_miffy.play("run")
+
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 	move_and_slide()
-	#var direction_discrete := direction.sign()
-	#match direction_discrete:
-		#Vector2.RIGHT:
-			#_character.texture = miffy_right 
-		#Vector2.LEFT:
-			#_character.tecture = miffy_left
-		#Vector2.UP: 
-			#_character.texture = miffy_back
-		#Vector2.DOWN:
-			#_character.texture = miffy_front
-			
-
-#func update_animation(input_axis):
-	#if Input.get_vector("move_up"):
-		#_miffy.play("front")

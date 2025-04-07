@@ -1,4 +1,4 @@
-extends Control
+class_name Startmenu extends Control
 
 @onready var start_game_button = %StartGameButton
 @onready var title = %Title
