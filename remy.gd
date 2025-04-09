@@ -17,4 +17,7 @@ func _on_body_exited(body: Node) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_detected and event.is_action_pressed("talk"):
-		get_tree().change_scene_to_file("res://dialogue.tscn") #change the scene later (replace it with dialogue onece done)
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue2.dialogue"), "start")
+		#changes to dialogue manager 
+		return
+	
