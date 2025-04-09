@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cn4t01yamrmfr" path="res://Miffy_front.png" id="3_akkr4"]
 [ext_resource type="Texture2D" uid="uid://1h4ggvq1ncdq" path="res://Miffy_right 2.png" id="4_eu62w"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf4rs"]
+size = Vector2(18.5, 12)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxc1l"]
 atlas = ExtResource("2_v7pby")
 region = Rect2(0, 0, 100, 100)
@@ -107,18 +110,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_211il"]
-radius = 24.0832
-
 [node name="PlatformerPlayer" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_xqba4")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_sf4rs")
+
 [node name="Miffy" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+scale = Vector2(0.5, 0.18)
 sprite_frames = SubResource("SpriteFrames_s4u46")
 animation = &"front"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 13)
-shape = SubResource("CircleShape2D_211il")
