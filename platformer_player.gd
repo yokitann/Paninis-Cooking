@@ -1,7 +1,8 @@
 extends CharacterBody2D
+class_name player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -200.0
 
 @onready var _animated_miffy = %Miffy
 

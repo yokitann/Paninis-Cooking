@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://ceyrfcf5pdl0f"]
+
+[ext_resource type="Script" path="res://walking_enemy.gd" id="1_bawwb"]
+[ext_resource type="Texture2D" uid="uid://dsg5axhu7h82p" path="res://Fox Sprite Sheet.png" id="1_nj2vx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1myb"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kjjp"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o4we"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jda1r"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_884gv"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gwlg"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f7hx"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73xmn"]
+atlas = ExtResource("1_nj2vx")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y35uv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1myb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kjjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o4we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jda1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_884gv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gwlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f7hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73xmn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WalkingEnemy" type="CharacterBody2D"]
+script = ExtResource("1_bawwb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_y35uv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, 0, -5, -4, -6, -4, -8, -6, -9, -8, -9, -12, -7, -12, -5, -11, -2, -8, -1, -9, 0, -13, 2, -15, 4, -15, 6, -14, 9, -14, 9, -12, 9, -10, 10, -9, 10, -7, 7, -4, 7, 0, 5, 0, 3, 0)
