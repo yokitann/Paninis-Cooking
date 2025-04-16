@@ -1,6 +1,12 @@
 extends CharacterBody2D
 
 var player_detected = false 
+@onready var _player = %Player
+
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "start"
+const DialogueBalloon = preload("res://dialogue/balloon.tscn")
+#dialogue stuff
 
 func _ready() -> void:
 	var detection_area = %Detection
@@ -17,7 +23,11 @@ func _on_body_exited(body: Node) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_detected and event.is_action_pressed("talk"):
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogue2.dialogue"), "start")
-		#changes to dialogue manager 
+		var dialogue: Node = DialogueBalloon.instantiate()
+		get_tree().current_scene.add_child(dialogue)
+		dialogue.start(dialogue_resource, dialogue_start)
+		_player.can_move = false
+		#changes to dialogue manager
+		# (OLD SCRIPT) DialogueManager.show_example_dialogue_balloon(load("res://dialogue2.dialogue"), "start")
 		return
 	

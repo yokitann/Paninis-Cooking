@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="Panini's Cooking"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+general/balloon_path="res://dialogue/balloon.tscn"
 
 [editor_plugins]
 
@@ -57,4 +62,4 @@ talk={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue2.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/dialogue2.dialogue")
