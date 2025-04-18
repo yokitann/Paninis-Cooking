@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1h4ggvq1ncdq"
-path="res://.godot/imported/Miffy_right 2.png-093d57a7a8790fb74699a17db9f02a33.ctex"
+uid="uid://bmlwawixrwci2"
+path="res://.godot/imported/Rice.png-57ef858c0b9be5fa8d6ee7c7044e5608.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miffy_right 2.png"
-dest_files=["res://.godot/imported/Miffy_right 2.png-093d57a7a8790fb74699a17db9f02a33.ctex"]
+source_file="res://Image/Rice.png"
+dest_files=["res://.godot/imported/Rice.png-57ef858c0b9be5fa8d6ee7c7044e5608.ctex"]
 
 [params]
 

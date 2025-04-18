@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://dshx65pjg7xbn"]
 
-[ext_resource type="Script" path="res://dialogue.gd" id="1_cplsq"]
-[ext_resource type="Texture2D" uid="uid://dr0mmntgn4te1" path="res://Image/Remy.png" id="1_ve1l4"]
-[ext_resource type="StyleBox" uid="uid://befvxmna6tm14" path="res://button_black.tres" id="2_tywrx"]
-[ext_resource type="StyleBox" uid="uid://dw34qir763qmh" path="res://button_blue.tres" id="3_h62e4"]
+[ext_resource type="Script" path="res://old dialogue/dialogue.gd" id="1_o4lqr"]
+[ext_resource type="Texture2D" uid="uid://dr0mmntgn4te1" path="res://Image/Remy.png" id="2_of0dq"]
+[ext_resource type="StyleBox" uid="uid://befvxmna6tm14" path="res://button_black.tres" id="3_hfjoy"]
+[ext_resource type="StyleBox" uid="uid://dw34qir763qmh" path="res://button_blue.tres" id="4_sr1cw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x882"]
 content_margin_left = 10.0
@@ -39,24 +39,24 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="Theme" id="Theme_7q4tj"]
-Button/styles/disabled = ExtResource("2_tywrx")
+Button/styles/disabled = ExtResource("3_hfjoy")
 Button/styles/focus = SubResource("StyleBoxFlat_ynwj5")
-Button/styles/hover = ExtResource("3_h62e4")
-Button/styles/normal = ExtResource("2_tywrx")
-Button/styles/pressed = ExtResource("3_h62e4")
+Button/styles/hover = ExtResource("4_sr1cw")
+Button/styles/normal = ExtResource("3_hfjoy")
+Button/styles/pressed = ExtResource("4_sr1cw")
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_cplsq")
+script = ExtResource("1_o4lqr")
 
 [node name="RemysBody" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 650.0
 offset_bottom = 995.0
-texture = ExtResource("1_ve1l4")
+texture = ExtResource("2_of0dq")
 
 [node name="Chat" type="RichTextLabel" parent="."]
 unique_name_in_owner = true

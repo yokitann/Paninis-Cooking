@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btkxegf0dom6d"
-path="res://.godot/imported/Miffy_back.png-81cf5b4d7338641a003283e288e7960a.ctex"
+uid="uid://c425iyf4pc2wj"
+path="res://.godot/imported/salmon-ingrediant.png-b6d56a277f1998772cbf93542818227c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miffy_back.png"
-dest_files=["res://.godot/imported/Miffy_back.png-81cf5b4d7338641a003283e288e7960a.ctex"]
+source_file="res://Image/salmon-ingrediant.png"
+dest_files=["res://.godot/imported/salmon-ingrediant.png-b6d56a277f1998772cbf93542818227c.ctex"]
 
 [params]
 

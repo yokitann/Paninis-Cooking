@@ -1,10 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://brhye2vq7cjyr"]
+[gd_scene load_steps=19 format=3 uid="uid://brhye2vq7cjyr"]
 
 [ext_resource type="Script" path="res://storyplayer.gd" id="1_e7gu2"]
-[ext_resource type="Texture2D" uid="uid://btkxegf0dom6d" path="res://Miffy_back.png" id="2_r40mr"]
-[ext_resource type="Texture2D" uid="uid://cn4t01yamrmfr" path="res://Miffy_front.png" id="3_nkpf5"]
-[ext_resource type="Texture2D" uid="uid://1h4ggvq1ncdq" path="res://Miffy_right 2.png" id="4_3ho64"]
-[ext_resource type="Texture2D" uid="uid://cgrv0aks3toec" path="res://Miffy_right.png" id="5_ytdv1"]
+[ext_resource type="Texture2D" uid="uid://btkxegf0dom6d" path="res://Image/Miffy_back.png" id="2_r40mr"]
+[ext_resource type="Texture2D" uid="uid://cn4t01yamrmfr" path="res://Image/Miffy_front.png" id="3_nkpf5"]
+[ext_resource type="Texture2D" uid="uid://1h4ggvq1ncdq" path="res://Image/Miffy_right 2.png" id="4_3ho64"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2s17"]
 atlas = ExtResource("2_r40mr")
@@ -53,22 +52,6 @@ region = Rect2(200, 0, 100, 100)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecilv"]
 atlas = ExtResource("4_3ho64")
 region = Rect2(300, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q1hq0"]
-atlas = ExtResource("5_ytdv1")
-region = Rect2(0, 0, 100, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_osa6v"]
-atlas = ExtResource("5_ytdv1")
-region = Rect2(100, 0, 100, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6hpr6"]
-atlas = ExtResource("5_ytdv1")
-region = Rect2(200, 0, 100, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5d76n"]
-atlas = ExtResource("5_ytdv1")
-region = Rect2(300, 0, 100, 75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5vy4i"]
 animations = [{
@@ -122,29 +105,12 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q1hq0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_osa6v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6hpr6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5d76n")
-}],
-"loop": true,
-"name": &"run2",
-"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5nqdf"]
-radius = 41.6083
+radius = 13.8101
 
-[node name="Player" type="CharacterBody2D"]
+[node name="StoryPlayerMiffy" type="CharacterBody2D"]
 position = Vector2(-730, -437)
 scale = Vector2(5, 5)
 motion_mode = 1
@@ -155,8 +121,8 @@ unique_name_in_owner = true
 position = Vector2(250.1, 124.2)
 scale = Vector2(0.582, 0.544)
 sprite_frames = SubResource("SpriteFrames_5vy4i")
-animation = &"run"
+animation = &"back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(249.2, 125.2)
+position = Vector2(250.4, 128.2)
 shape = SubResource("CircleShape2D_5nqdf")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgrv0aks3toec"
-path="res://.godot/imported/Miffy_right.png-27078a0179e56f1c31c774623e776f34.ctex"
+uid="uid://b0uv8tdq7ldje"
+path="res://.godot/imported/seaweed-sushi.png-9d099dc3c2449e6174a32e03b7920814.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miffy_right.png"
-dest_files=["res://.godot/imported/Miffy_right.png-27078a0179e56f1c31c774623e776f34.ctex"]
+source_file="res://Image/seaweed-sushi.png"
+dest_files=["res://.godot/imported/seaweed-sushi.png-9d099dc3c2449e6174a32e03b7920814.ctex"]
 
 [params]
 
