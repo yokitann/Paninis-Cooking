@@ -23,6 +23,14 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 general/balloon_path="res://dialogue/balloon.tscn"
 
+[display]
+
+window/size/viewport_width=2000
+window/size/viewport_height=1000
+window/size/window_width_override=2000
+window/size/window_height_override=1000
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")

@@ -7,8 +7,8 @@
 [node name="Game" type="Node2D"]
 
 [node name="Kitchen" type="Sprite2D" parent="."]
-position = Vector2(575.5, 324.5)
-scale = Vector2(3.62222, 2.58)
+position = Vector2(995.5, 495.5)
+scale = Vector2(6.28889, 3.948)
 texture = ExtResource("1_5yudt")
 
 [node name="Remy" parent="." instance=ExtResource("3_1vict")]
