@@ -107,18 +107,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_211il"]
-radius = 24.0832
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0kab"]
+radius = 7.25
+height = 14.5
 
 [node name="PlatformerPlayer" type="CharacterBody2D"]
-motion_mode = 1
+collision_layer = 2
+platform_floor_layers = 4294901760
 script = ExtResource("1_xqba4")
 
 [node name="Miffy" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+scale = Vector2(0.5, 0.18)
 sprite_frames = SubResource("SpriteFrames_s4u46")
 animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 13)
-shape = SubResource("CircleShape2D_211il")
+light_mask = 2
+shape = SubResource("CapsuleShape2D_y0kab")
+
+[node name="Camera2D" type="Camera2D" parent="."]
