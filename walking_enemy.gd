@@ -1,11 +1,14 @@
 extends CharacterBody2D
 
 var direction: Vector2 = Vector2.RIGHT
-var speed: float = 25.0
+var speed: float = 50.0
 
 @onready var ledge_check_right = $LedgeCheckRight
 @onready var ledge_check_left = $LedgeCheckLeft
 @onready var sprite = $AnimatedSprite2D 
+
+func _ready():
+	sprite.play("Walking")
 
 func _physics_process(delta: float) -> void:
 	var found_wall: bool = is_on_wall()
@@ -13,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	if found_wall or found_ledge:
 		direction *= -1
-		sprite.flip_h = direction.x > 0
+		sprite.flip_h = direction.x < 0
 
 	velocity = direction * speed
 	move_and_slide()
