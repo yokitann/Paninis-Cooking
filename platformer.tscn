@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://cod0cfy46a8um"]
+[gd_scene load_steps=10 format=4 uid="uid://cod0cfy46a8um"]
 
 [ext_resource type="Script" path="res://platformer.gd" id="1_3vvrl"]
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_e7n4y"]
 [ext_resource type="PackedScene" uid="uid://cpdyfjliwm0em" path="res://platformer_player.tscn" id="2_xrqc8"]
-[ext_resource type="PackedScene" path="res://spike.tscn" id="3_ax017"]
-[ext_resource type="PackedScene" path="res://walking_enemy.tscn" id="5_tx5od"]
+[ext_resource type="PackedScene" uid="uid://d2cqqo81s4i1s" path="res://spike.tscn" id="3_ax017"]
+[ext_resource type="PackedScene" uid="uid://ceyrfcf5pdl0f" path="res://walking_enemy.tscn" id="5_tx5od"]
 [ext_resource type="PackedScene" uid="uid://ca308n4ic0324" path="res://rice.tscn" id="6_6uhlr"]
+[ext_resource type="PackedScene" uid="uid://doha26su5o3kp" path="res://bar.tscn" id="7_mvwm3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67rog"]
 texture = ExtResource("1_e7n4y")
@@ -311,3 +312,15 @@ position = Vector2(378, 118)
 
 [node name="Rice" parent="." instance=ExtResource("6_6uhlr")]
 position = Vector2(418, 98)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Bar" parent="CanvasLayer" instance=ExtResource("7_mvwm3")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 4.0
+offset_right = -16.0
+offset_bottom = 12.0
+grow_horizontal = 0
