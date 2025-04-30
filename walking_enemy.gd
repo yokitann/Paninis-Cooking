@@ -10,7 +10,7 @@ var speed: float = 50.0
 func _ready():
 	sprite.play("Walking")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var found_wall: bool = is_on_wall()
 	var found_ledge: bool = not ledge_check_right.is_colliding() or not ledge_check_left.is_colliding()
 	

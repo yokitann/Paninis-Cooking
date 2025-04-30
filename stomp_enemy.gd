@@ -4,13 +4,15 @@ enum State { HOVER, FALL, LAND, RISE }
 
 var state: State = State.HOVER
 var start_position: Vector2
-var sprite_height = sprite.texture.get_height() * sprite.scale.y
+var sprite_height: float
+
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var timer: Timer = $Timer
 @onready var raycast: RayCast2D = $RayCast2D
 
 func _ready():
 	start_position = global_position
+	sprite_height = sprite.texture.get_height() * sprite.scale.y
 
 func _physics_process(delta: float) -> void:
 	match state:
