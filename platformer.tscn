@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cod0cfy46a8um"]
+[gd_scene load_steps=14 format=4 uid="uid://cod0cfy46a8um"]
 
 [ext_resource type="Script" path="res://platformer.gd" id="1_3vvrl"]
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_e7n4y"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://belaspd1ysvup" path="res://rice.tscn" id="6_1e7e4"]
 [ext_resource type="Script" path="res://canvas_layer.gd" id="6_mqgwf"]
 [ext_resource type="PackedScene" uid="uid://bvmpgjyku7uqf" path="res://inventory_gui.tscn" id="6_uorte"]
+[ext_resource type="PackedScene" uid="uid://dkdgs0o768e7a" path="res://salmon.tscn" id="7_h7kpj"]
+[ext_resource type="PackedScene" uid="uid://bwos5yxnj5byo" path="res://spam.tscn" id="8_um7xs"]
+[ext_resource type="PackedScene" uid="uid://b070rmxksh8xh" path="res://seaweed.tscn" id="9_ul0ue"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67rog"]
 texture = ExtResource("1_e7n4y")
@@ -325,11 +328,23 @@ rotation = 3.14159
 position = Vector2(108, 27)
 rotation = 3.14159
 
-[node name="Rice" parent="." instance=ExtResource("6_1e7e4")]
-position = Vector2(404, 97)
+[node name="rice" parent="." instance=ExtResource("6_1e7e4")]
+position = Vector2(418, 80)
+
+[node name="salmon" parent="." instance=ExtResource("7_h7kpj")]
+position = Vector2(457, 91)
+
+[node name="spam" parent="." instance=ExtResource("8_um7xs")]
+position = Vector2(388, 76)
+
+[node name="seaweed" parent="." instance=ExtResource("9_ul0ue")]
+position = Vector2(353, 91)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("6_mqgwf")
 
 [node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("6_uorte")]
 unique_name_in_owner = true
+offset_left = 189.0
+offset_right = 302.0
+size_flags_horizontal = 8

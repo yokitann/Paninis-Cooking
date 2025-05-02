@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwos5yxnj5byo"]
+
+[ext_resource type="Texture2D" uid="uid://n7prskdiraq2" path="res://Image/spam.png" id="1_5u5yq"]
+[ext_resource type="Script" path="res://spam.gd" id="1_38la6"]
+[ext_resource type="Resource" uid="uid://bqwdpb020f2ox" path="res://spam.tres" id="2_17lpn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xte0o"]
+radius = 6.0
+
+[node name="spam" type="Area2D"]
+script = ExtResource("1_38la6")
+itemRes = ExtResource("2_17lpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_5u5yq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
+shape = SubResource("CircleShape2D_xte0o")
