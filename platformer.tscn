@@ -335,7 +335,7 @@ position = Vector2(418, 80)
 position = Vector2(457, 91)
 
 [node name="spam" parent="." instance=ExtResource("8_um7xs")]
-position = Vector2(388, 76)
+position = Vector2(392, 89)
 
 [node name="seaweed" parent="." instance=ExtResource("9_ul0ue")]
 position = Vector2(353, 91)
