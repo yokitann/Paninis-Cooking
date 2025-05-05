@@ -347,4 +347,3 @@ script = ExtResource("6_mqgwf")
 unique_name_in_owner = true
 offset_left = 189.0
 offset_right = 302.0
-size_flags_horizontal = 8
