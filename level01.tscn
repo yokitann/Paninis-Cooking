@@ -407,6 +407,4 @@ position = Vector2(918, 387)
 tile_map_data = PackedByteArray()
 
 [node name="Door" parent="." index="26" instance=ExtResource("7_pnrhc")]
-position = Vector2(1062, 305)
-collision_layer = 1
-target_level_path = "res://level02.tscn"
+position = Vector2(1061, 304)
