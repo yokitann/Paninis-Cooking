@@ -340,6 +340,9 @@ position = Vector2(392, 89)
 [node name="seaweed" parent="." instance=ExtResource("9_ul0ue")]
 position = Vector2(353, 91)
 
+[node name="seaweed2" parent="." instance=ExtResource("9_ul0ue")]
+position = Vector2(354, 66)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("6_mqgwf")
 
