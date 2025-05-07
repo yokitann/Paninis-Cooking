@@ -108,11 +108,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5nqdf"]
-radius = 13.8101
+radius = 7.85255
 
 [node name="StoryPlayerMiffy" type="CharacterBody2D"]
-position = Vector2(-730, -437)
-scale = Vector2(5, 5)
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(4, 4)
+collision_layer = 9
 motion_mode = 1
 script = ExtResource("1_e7gu2")
 
@@ -122,7 +124,8 @@ position = Vector2(250.1, 124.2)
 scale = Vector2(0.582, 0.544)
 sprite_frames = SubResource("SpriteFrames_5vy4i")
 animation = &"back"
+offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(250.4, 128.2)
+position = Vector2(249.25, 131.5)
 shape = SubResource("CircleShape2D_5nqdf")

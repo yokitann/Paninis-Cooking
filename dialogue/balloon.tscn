@@ -78,6 +78,8 @@ Button/styles/normal = SubResource("StyleBoxFlat_mn61l")
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 0, 0)
 script = ExtResource("1_36de5")
 
 [node name="Balloon" type="Control" parent="."]
@@ -86,53 +88,50 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 33.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 8
 theme = SubResource("Theme_qq3yp")
 
 [node name="Panel" type="Panel" parent="Balloon"]
 clip_children = 2
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -183.0
-offset_right = -19.0
-offset_bottom = -19.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_slrn4")
-
-[node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 507.0
+offset_right = 637.0
+offset_bottom = 440.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_slrn4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel/Dialogue"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel"]
 layout_mode = 2
+offset_left = 30.0
+offset_top = 15.0
+offset_right = 986.0
+offset_bottom = 185.0
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/VBoxContainer"]
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/VBoxContainer"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/Panel/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/normal_font_size = 20
 text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
@@ -142,10 +141,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 485.0
-offset_top = -253.0
-offset_right = 984.0
-offset_bottom = -20.0
+offset_left = 433.5
+offset_top = 360.0
+offset_right = 800.5
+offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -160,7 +159,7 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 theme = SubResource("Theme_oplb1")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

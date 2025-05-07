@@ -22,11 +22,15 @@ func _on_body_exited(body: Node) -> void:
 		player_detected = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if player_detected and event.is_action_pressed("talk"):
-		var dialogue: Node = DialogueBalloon.instantiate()
+	var dialogue: Node = DialogueBalloon.instantiate()
+	if player_detected and event.is_action_pressed("talk"): 
 		get_tree().current_scene.add_child(dialogue)
 		dialogue.start(dialogue_resource, dialogue_start)
-		_player.can_move = false
+		
+		#_player.can_move = false 
+		#stops the player from moving when dialogue play
+		#but can't get player to move again when the dialogue ends
+		
 		#changes to dialogue manager
 		# (OLD SCRIPT) DialogueManager.show_example_dialogue_balloon(load("res://dialogue2.dialogue"), "start")
 		return

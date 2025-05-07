@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="Panini's Cooking"
-run/main_scene="res://game.tscn"
+run/main_scene="res://scene/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+scene_manager="*res://scene/scene_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
@@ -25,8 +26,8 @@ general/balloon_path="res://dialogue/balloon.tscn"
 
 [display]
 
-window/size/viewport_width=2000
-window/size/viewport_height=1000
+window/size/viewport_width=300
+window/size/viewport_height=200
 window/size/window_width_override=2000
 window/size/window_height_override=1000
 window/stretch/mode="canvas_items"
@@ -71,3 +72,7 @@ talk={
 [internationalization]
 
 locale/translations_pot_files=PackedStringArray("res://dialogue/dialogue2.dialogue")
+
+[layer_names]
+
+2d_physics/layer_4="trigger"

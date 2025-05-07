@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-var max_speed := 200.0
+var max_speed := 100.0
 var can_move = true 
 @onready var _animated_miffy = %Miffy
 
