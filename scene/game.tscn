@@ -1563,7 +1563,7 @@ script = ExtResource("1_n77e7")
 [node name="Player" parent="." instance=ExtResource("8_2vk81")]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(307, 49)
+position = Vector2(317, 3)
 scale = Vector2(0.7, 0.7)
 
 [node name="TileMap" type="TileMap" parent="."]
