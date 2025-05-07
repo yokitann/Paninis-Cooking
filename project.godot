@@ -11,13 +11,12 @@ config_version=5
 [application]
 
 config/name="Panini's Cooking"
-run/main_scene="res://scene/game.tscn"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-scene_manager="*res://scene/scene_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
@@ -68,6 +67,11 @@ talk={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
 ]
 }
+toggle_inventory={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
 
 [internationalization]
 
@@ -75,4 +79,9 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/dialogue2.dialog
 
 [layer_names]
 
-2d_physics/layer_4="trigger"
+2d_physics/layer_1="World"
+2d_physics/layer_2="Characters"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

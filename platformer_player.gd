@@ -1,9 +1,26 @@
 extends CharacterBody2D
+class_name player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -200.0
 
 @onready var _animated_miffy = %Miffy
+@export var inventory: Inventory
+
+func _ready():
+	%Detection.area_entered.connect(_on_detection_area_entered)
+	
+func _on_detection_area_entered(area: Area2D) -> void:
+	if area.has_method("collect"):
+		print("yess")
+		area.collect(inventory)
+		print("lol")
+	else:
+		print("no")
+
+#func _on_body_entered(area) -> void:
+	#if area.has_method("collect"):
+		#area.collect(inventory)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
