@@ -1554,16 +1554,16 @@ sources/3 = SubResource("TileSetAtlasSource_jspk3")
 sources/4 = SubResource("TileSetAtlasSource_til3p")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yryv0"]
-size = Vector2(12, 9)
+size = Vector2(16, 9)
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_n77e7")
 
-[node name="Player" parent="." instance=ExtResource("8_2vk81")]
+[node name="StoryPlayerMiffy" parent="." instance=ExtResource("8_2vk81")]
 unique_name_in_owner = true
-texture_filter = 1
-position = Vector2(307, 49)
+z_index = 2
+position = Vector2(534, 95)
 scale = Vector2(0.7, 0.7)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1596,18 +1596,22 @@ connected_scene = "house"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
 z_index = 2
-position = Vector2(0, -1.5)
+position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_yryv0")
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("tilemap", "follow_point")]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("tilemap")]
 unique_name_in_owner = true
-position = Vector2(306, 49)
+position = Vector2(430, 80)
 scale = Vector2(0.7, 0.7)
-anchor_mode = 0
 limit_left = 0
 limit_top = 0
 limit_right = 480
 limit_bottom = 288
 script = ExtResource("9_r67n2")
 tilemap = NodePath("../TileMap")
-follow_point = NodePath("../Player")
+
+[node name="EntranceSpawn" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="appearance" type="Marker2D" parent="EntranceSpawn"]
+position = Vector2(493, 82)

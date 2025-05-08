@@ -120,12 +120,10 @@ script = ExtResource("1_e7gu2")
 
 [node name="Miffy" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(250.1, 124.2)
 scale = Vector2(0.582, 0.544)
 sprite_frames = SubResource("SpriteFrames_5vy4i")
 animation = &"back"
-offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(249.25, 131.5)
+position = Vector2(-1, 12)
 shape = SubResource("CircleShape2D_5nqdf")

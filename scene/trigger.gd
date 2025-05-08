@@ -1,6 +1,6 @@
 class_name Trigger extends Area2D
 
-var player = Player
+var story_player = Player
 @export var connected_scene : String
 
 func _on_body_entered(body) -> void:

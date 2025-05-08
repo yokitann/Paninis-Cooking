@@ -11,5 +11,5 @@ func _ready():
 	limit_right = world_size.x
 	limit_bottom = world_size.y
 
-func _process(delta):
+func _process(_delta):
 	global_position = follow_point.global_position 
