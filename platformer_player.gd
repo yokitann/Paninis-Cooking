@@ -16,6 +16,8 @@ var wall_jump_cooldown = 0.0
 
 @onready var _animated_miffy = %Miffy
 
+
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -61,6 +63,8 @@ func _physics_process(delta: float) -> void:
 		_animated_miffy.play("front")
 	else:
 		_animated_miffy.play("run")
+
+
 
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)
 

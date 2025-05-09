@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b4qsaiuhjishd"]
+[gd_scene load_steps=15 format=4 uid="uid://b4qsaiuhjishd"]
 
 [ext_resource type="PackedScene" uid="uid://dtr7duarfe8q8" path="res://level02.tscn" id="1_a86dq"]
 [ext_resource type="Script" path="res://level_01.gd" id="2_l0x8x"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c21tb0ikytk64" path="res://moving_enemy.tscn" id="5_tlpns"]
 [ext_resource type="PackedScene" uid="uid://dewouyhspp4xo" path="res://stomp_enemy.tscn" id="6_ucvj4"]
 [ext_resource type="PackedScene" uid="uid://dgeqesru46ywu" path="res://door.tscn" id="7_pnrhc"]
+[ext_resource type="PackedScene" uid="uid://bpw2gplgefyw8" path="res://massive_spike.tscn" id="9_ru33f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bcnrp"]
 texture = ExtResource("2_vpn4t")
@@ -314,9 +315,10 @@ point_count = 5
 
 [node name="Level" instance=ExtResource("1_a86dq")]
 script = ExtResource("2_l0x8x")
+death_y_position = 475.0
 
 [node name="PlatformerPlayer" parent="." index="0"]
-position = Vector2(1032, 303)
+position = Vector2(81, 50)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." index="1"]
 position = Vector2(9, 9)
@@ -408,3 +410,9 @@ tile_map_data = PackedByteArray()
 
 [node name="Door" parent="." index="26" instance=ExtResource("7_pnrhc")]
 position = Vector2(1061, 304)
+
+[node name="Spike" parent="." index="28"]
+position = Vector2(513, 220)
+
+[node name="Massive Spike" parent="." index="35" instance=ExtResource("9_ru33f")]
+position = Vector2(359, 638)
