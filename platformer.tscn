@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://bh7hm2moqft4o"]
 
-[ext_resource type="Script" path="res://platformer.gd" id="1_3vvrl"]
+[ext_resource type="Script" path="res://Level01.gd" id="1_3vvrl"]
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_e7n4y"]
 [ext_resource type="PackedScene" uid="uid://cpdyfjliwm0em" path="res://platformer_player.tscn" id="2_xrqc8"]
 [ext_resource type="PackedScene" uid="uid://d2cqqo81s4i1s" path="res://spike.tscn" id="3_ax017"]
@@ -294,7 +294,7 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_67rog")
 
-[node name="Platformer" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource("1_3vvrl")
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource("2_xrqc8")]
