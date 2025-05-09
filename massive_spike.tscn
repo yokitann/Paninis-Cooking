@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_p26m8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqvsr"]
-size = Vector2(903, 448)
+size = Vector2(1889, 448)
 
 [node name="Massive Spike" type="Node2D"]
 
@@ -17,5 +17,5 @@ region_rect = Rect2(144, 54, 18, 18)
 [node name="Hitbox" parent="." instance=ExtResource("1_33dsw")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(2.5, 225)
+position = Vector2(495.5, 225)
 shape = SubResource("RectangleShape2D_nqvsr")
