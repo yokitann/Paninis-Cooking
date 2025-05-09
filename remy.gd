@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var player_detected = false 
-@onready var _player = %Player
+@onready var _player = %StoryPlayerMiffy
 
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
@@ -14,11 +14,11 @@ func _ready() -> void:
 	detection_area.body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body: Node) -> void:
-	if body.name == "Player":  
+	if body is Player:  
 		player_detected = true
 
 func _on_body_exited(body: Node) -> void:
-	if body.name == "Player": 
+	if body is Player: 
 		player_detected = false
 
 func _unhandled_input(event: InputEvent) -> void:

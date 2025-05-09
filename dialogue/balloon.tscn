@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdtqa6jeddfvm"]
+[gd_scene load_steps=13 format=3 uid="uid://cdtqa6jeddfvm"]
 
 [ext_resource type="Script" path="res://dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -70,10 +70,18 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udduq"]
+bg_color = Color(0.19481, 0.355798, 0.685596, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn61l"]
 bg_color = Color(0.486275, 0.615686, 0.772549, 1)
 
 [sub_resource type="Theme" id="Theme_oplb1"]
+Button/styles/focus = SubResource("StyleBoxFlat_udduq")
 Button/styles/normal = SubResource("StyleBoxFlat_mn61l")
 
 [node name="ExampleBalloon" type="CanvasLayer"]
@@ -88,7 +96,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 33.0
+offset_left = 26.6667
+offset_top = -46.6667
+offset_right = 59.6667
+offset_bottom = -46.6667
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
@@ -100,10 +111,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 23.0
-offset_top = 507.0
-offset_right = 637.0
-offset_bottom = 440.0
+offset_left = 20.0
+offset_top = 510.0
+offset_right = 634.0
+offset_bottom = 443.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -141,9 +152,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 433.5
+offset_left = 443.5
 offset_top = 360.0
-offset_right = 800.5
+offset_right = 810.5
 offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 0
