@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr0mmntgn4te1"
-path="res://.godot/imported/remy.png-89e80162ba71d5c0aa9e711abff9bcb6.ctex"
+uid="uid://b84lsxyhr3rxu"
+path="res://.godot/imported/Miffy_jump-Sheet.png-22ff96bd8fcf4e167a35ae11304e8539.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/remy.png"
-dest_files=["res://.godot/imported/remy.png-89e80162ba71d5c0aa9e711abff9bcb6.ctex"]
+source_file="res://Image/Miffy_jump-Sheet.png"
+dest_files=["res://.godot/imported/Miffy_jump-Sheet.png-22ff96bd8fcf4e167a35ae11304e8539.ctex"]
 
 [params]
 

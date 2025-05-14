@@ -33,7 +33,6 @@ func _on_detection_area_entered(area: Area2D) -> void:
 		#area.collect(inventory)
 
 
-
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -79,7 +78,7 @@ func _physics_process(delta: float) -> void:
 		_animated_miffy.play("front")
 	else:
 		_animated_miffy.play("run")
-
+	
 
 
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)

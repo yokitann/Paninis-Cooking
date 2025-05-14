@@ -409,7 +409,7 @@ position = Vector2(936, 387)
 position = Vector2(918, 387)
 
 [node name="Door" parent="." instance=ExtResource("8_xng8k")]
-position = Vector2(970, 289)
+position = Vector2(1045, 287)
 
 [node name="Massive Spike" parent="." instance=ExtResource("9_bmbqm")]
 position = Vector2(451, 579)

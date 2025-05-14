@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://cpdyfjliwm0em"]
+[gd_scene load_steps=25 format=3 uid="uid://cpdyfjliwm0em"]
 
 [ext_resource type="Script" path="res://platformer_player.gd" id="1_xqba4"]
 [ext_resource type="Texture2D" uid="uid://btkxegf0dom6d" path="res://Image/Miffy_back.png" id="2_v7pby"]
 [ext_resource type="Resource" uid="uid://difx5b6xbjwne" path="res://player_inventory.tres" id="2_wqdc8"]
 [ext_resource type="Texture2D" uid="uid://cn4t01yamrmfr" path="res://Image/Miffy_front.png" id="3_akkr4"]
 [ext_resource type="Texture2D" uid="uid://1h4ggvq1ncdq" path="res://Image/Miffy_right 2.png" id="4_eu62w"]
+[ext_resource type="Texture2D" uid="uid://b84lsxyhr3rxu" path="res://Image/Miffy_jump-Sheet.png" id="5_sj8yj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxc1l"]
 atlas = ExtResource("2_v7pby")
@@ -37,6 +38,18 @@ region = Rect2(200, 0, 100, 100)
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6x4r"]
 atlas = ExtResource("3_akkr4")
 region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh5ti"]
+atlas = ExtResource("5_sj8yj")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm5sd"]
+atlas = ExtResource("5_sj8yj")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvxbq"]
+atlas = ExtResource("5_sj8yj")
+region = Rect2(400, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dt6ic"]
 atlas = ExtResource("4_eu62w")
@@ -92,6 +105,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_dh5ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm5sd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvxbq")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_dt6ic")
 }, {
 "duration": 1.0,
@@ -127,7 +154,8 @@ unique_name_in_owner = true
 position = Vector2(0, -9)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_s4u46")
-animation = &"front"
+animation = &"jump"
+frame_progress = 0.357833
 
 [node name="Detection" type="Area2D" parent="."]
 unique_name_in_owner = true
