@@ -1,16 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://xf8bvbtmt27k"]
+[gd_scene load_steps=6 format=3 uid="uid://xf8bvbtmt27k"]
 
 [ext_resource type="Script" path="res://remy.gd" id="1_oi7f1"]
 [ext_resource type="Texture2D" uid="uid://dr0mmntgn4te1" path="res://Image/Remy.png" id="1_q3o0i"]
+[ext_resource type="Resource" uid="uid://bi7b2n3uev34f" path="res://dialogue/dialogue2.dialogue" id="2_r6gxx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8h127"]
-radius = 96.5091
+radius = 58.0345
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kcais"]
-radius = 150.12
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okqdi"]
+size = Vector2(120, 277)
 
 [node name="Remy" type="CharacterBody2D"]
 script = ExtResource("1_oi7f1")
+dialogue_resource = ExtResource("2_r6gxx")
 
 [node name="Character" type="Sprite2D" parent="."]
 position = Vector2(446, 260)
@@ -25,6 +27,6 @@ shape = SubResource("CircleShape2D_8h127")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
-position = Vector2(435, 272)
-shape = SubResource("CircleShape2D_kcais")
+position = Vector2(423, 261.5)
+shape = SubResource("RectangleShape2D_okqdi")
 debug_color = Color(0.382792, 0.523285, 0.845007, 0.42)

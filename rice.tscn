@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://belaspd1ysvup"]
+
+[ext_resource type="Script" path="res://rice.gd" id="1_fdqpn"]
+[ext_resource type="Texture2D" uid="uid://bmlwawixrwci2" path="res://Image/Rice.png" id="1_xcsj2"]
+[ext_resource type="Resource" uid="uid://do5hixwe8jtw5" path="res://rice.tres" id="2_tfof2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6s47"]
+size = Vector2(62, 69)
+
+[node name="Rice" type="Area2D" groups=["item"]]
+scale = Vector2(0.3, 0.3)
+collision_layer = 2
+script = ExtResource("1_fdqpn")
+itemRes = ExtResource("2_tfof2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xcsj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_x6s47")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

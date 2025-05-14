@@ -15,6 +15,22 @@ var coyote_time_timer = 0.0
 var wall_jump_cooldown = 0.0
 
 @onready var _animated_miffy = %Miffy
+@export var inventory: Inventory
+
+func _ready():
+	%Detection.area_entered.connect(_on_detection_area_entered)
+	
+func _on_detection_area_entered(area: Area2D) -> void:
+	if area.has_method("collect"):
+		print("yess")
+		area.collect(inventory)
+		print("lol")
+	else:
+		print("no")
+
+#func _on_body_entered(area) -> void:
+	#if area.has_method("collect"):
+		#area.collect(inventory)
 
 
 

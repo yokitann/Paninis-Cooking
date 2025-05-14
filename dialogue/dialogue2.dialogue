@@ -1,0 +1,24 @@
+~ this_is_a_node_title
+Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+Nathan: Here are some choices.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => this_is_a_node_title
+- End the conversation => END
+Nathan: For more information see the online documentation.
+~ start
+Remy: Hello! My name is Remy, the rat!
+Miffy: I need help! Can you teach me how to cook?
+Remy: Of course! What's your name?
+Miffy: My name is Miffy! 
+Remy: [[Nice name!|I love your name!|Cool name!]] I can be your chef guide. 
+Remy: Are you ready? 
+- Yes!
+	Remy: Alright! Let's goooo!
+- I need more time...
+	Remy: That's okay! Bye bye!
+	=> END
+	=> END
+=> END

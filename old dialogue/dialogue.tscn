@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://dshx65pjg7xbn"]
+
+[ext_resource type="Script" path="res://old dialogue/dialogue.gd" id="1_o4lqr"]
+[ext_resource type="Texture2D" uid="uid://dr0mmntgn4te1" path="res://Image/Remy.png" id="2_of0dq"]
+[ext_resource type="StyleBox" uid="uid://befvxmna6tm14" path="res://button_black.tres" id="3_hfjoy"]
+[ext_resource type="StyleBox" uid="uid://dw34qir763qmh" path="res://button_blue.tres" id="4_sr1cw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x882"]
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_83ipl"]
+default_font_size = 20
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_1x882")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynwj5"]
+content_margin_left = 2.0
+content_margin_top = 3.0
+content_margin_right = 2.0
+content_margin_bottom = 3.0
+bg_color = Color(0, 0, 0, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.460035, 0.873491, 0.932606, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_7q4tj"]
+Button/styles/disabled = ExtResource("3_hfjoy")
+Button/styles/focus = SubResource("StyleBoxFlat_ynwj5")
+Button/styles/hover = ExtResource("4_sr1cw")
+Button/styles/normal = ExtResource("3_hfjoy")
+Button/styles/pressed = ExtResource("4_sr1cw")
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o4lqr")
+
+[node name="RemysBody" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 995.0
+texture = ExtResource("2_of0dq")
+
+[node name="Chat" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 12.826
+anchor_right = 28.835
+anchor_bottom = 15.959
+offset_left = 80.96
+offset_top = 143.0
+offset_right = -384.4
+offset_bottom = -447.36
+scale = Vector2(3, 3)
+theme = SubResource("Theme_83ipl")
+text = "Helloooooooo"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 25.016
+anchor_top = 13.805
+anchor_right = 28.3
+anchor_bottom = 16.008
+offset_left = -21.64
+offset_top = 17.8
+offset_right = -78.0
+offset_bottom = -39.3201
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+theme = SubResource("Theme_7q4tj")
+text = "Next
+"

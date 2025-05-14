@@ -1,13 +1,15 @@
 class_name Player extends CharacterBody2D
 
-var max_speed := 200.0
+var max_speed := 100.0
+var can_move = true 
 @onready var _animated_miffy = %Miffy
 
 func _physics_process(_delta: float) -> void:
-	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * max_speed
-	move_and_slide()
-	update_animation(direction)
+	if can_move:
+		var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		velocity = direction * max_speed
+		move_and_slide()
+		update_animation(direction)
 
 func update_animation(direction: Vector2) -> void:
 	if direction.length() > 0:
