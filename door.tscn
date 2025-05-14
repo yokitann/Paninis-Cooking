@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgeqesru46ywu"]
+[gd_scene load_steps=6 format=3 uid="uid://dgeqesru46ywu"]
 
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_hwmkh"]
 [ext_resource type="Script" path="res://door.gd" id="1_kehrn"]
 [ext_resource type="PackedScene" uid="uid://dtr7duarfe8q8" path="res://level02.tscn" id="2_txpgp"]
+[ext_resource type="PackedScene" uid="uid://b5q4ur34fhr30" path="res://transition_layer.tscn" id="4_gjb1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72ck5"]
 size = Vector2(14, 22)
@@ -21,5 +22,7 @@ region_rect = Rect2(180, 103, 18, 23)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_72ck5")
+
+[node name="TransitionLayer" parent="." instance=ExtResource("4_gjb1s")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

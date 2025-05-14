@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://2e4k7ivukdh8"]
+[gd_scene load_steps=15 format=4 uid="uid://2e4k7ivukdh8"]
 
 [ext_resource type="Script" path="res://Level01.gd" id="1_3vvrl"]
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_e7n4y"]
@@ -7,9 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ceyrfcf5pdl0f" path="res://walking_enemy.tscn" id="5_tx5od"]
 [ext_resource type="PackedScene" uid="uid://c21tb0ikytk64" path="res://moving_enemy.tscn" id="6_oq487"]
 [ext_resource type="PackedScene" uid="uid://dewouyhspp4xo" path="res://stomp_enemy.tscn" id="7_8k7ng"]
-[ext_resource type="Script" path="res://canvas_layer.gd" id="8_qdctt"]
-[ext_resource type="PackedScene" uid="uid://bvmpgjyku7uqf" path="res://inventory_gui.tscn" id="9_2prwx"]
-[ext_resource type="PackedScene" uid="uid://bwos5yxnj5byo" path="res://spam.tscn" id="10_h8o30"]
+[ext_resource type="PackedScene" uid="uid://dgeqesru46ywu" path="res://door.tscn" id="8_xng8k"]
+[ext_resource type="PackedScene" uid="uid://bpw2gplgefyw8" path="res://massive_spike.tscn" id="9_bmbqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10sqk"]
 texture = ExtResource("1_e7n4y")
@@ -315,14 +314,11 @@ _data = {
 point_count = 5
 
 [node name="Platformer" type="Node2D"]
-texture_filter = 1
 script = ExtResource("1_3vvrl")
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource("2_xrqc8")]
 z_index = 10
-texture_filter = 1
-position = Vector2(81, 59)
-scale = Vector2(0.9, 0.9)
+position = Vector2(1018, 307)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(9, 9)
@@ -409,15 +405,8 @@ position = Vector2(936, 387)
 [node name="Spike18" parent="." instance=ExtResource("3_ax017")]
 position = Vector2(918, 387)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("8_qdctt")
+[node name="Door" parent="." instance=ExtResource("8_xng8k")]
+position = Vector2(1043, 304)
 
-[node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("9_2prwx")]
-unique_name_in_owner = true
-offset_left = 211.0
-offset_top = 2.0
-offset_right = 324.0
-offset_bottom = 42.0
-
-[node name="spam" parent="." instance=ExtResource("10_h8o30")]
-position = Vector2(112, 67)
+[node name="Massive Spike" parent="." instance=ExtResource("9_bmbqm")]
+position = Vector2(451, 579)
