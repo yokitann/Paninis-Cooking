@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://cpdyfjliwm0em"]
+[gd_scene load_steps=22 format=3 uid="uid://cpdyfjliwm0em"]
 
 [ext_resource type="Script" path="res://platformer_player.gd" id="1_xqba4"]
 [ext_resource type="Texture2D" uid="uid://btkxegf0dom6d" path="res://Image/Miffy_back.png" id="2_v7pby"]
 [ext_resource type="Resource" uid="uid://difx5b6xbjwne" path="res://player_inventory.tres" id="2_wqdc8"]
 [ext_resource type="Texture2D" uid="uid://cn4t01yamrmfr" path="res://Image/Miffy_front.png" id="3_akkr4"]
 [ext_resource type="Texture2D" uid="uid://1h4ggvq1ncdq" path="res://Image/Miffy_right 2.png" id="4_eu62w"]
+[ext_resource type="PackedScene" uid="uid://b317wrifwd2la" path="res://dust.tscn" id="6_ereke"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxc1l"]
 atlas = ExtResource("2_v7pby")
@@ -142,5 +143,14 @@ shape = SubResource("CapsuleShape2D_y0kab")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_57xme")
 debug_color = Color(0.789456, 0.289952, 0.794487, 0.42)
+
+[node name="AudioStreamPlayer_Walking" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AudioStreamPlayer_Jumping" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Dust" parent="Marker2D" instance=ExtResource("6_ereke")]
+position = Vector2(0, -3)
 
 [connection signal="area_entered" from="Detection" to="." method="_on_detection_area_entered"]

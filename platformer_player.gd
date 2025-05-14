@@ -8,11 +8,14 @@ const JUMP_BUFFER_TIME = 0.15
 const COYOTE_TIME = 0.1
 const WALL_JUMP_FORCE = Vector2(150, -200)
 const WALL_JUMP_TIME = 0.2
+const MAX_JUMPS := 2
 
 var double_jump = 1
 var jump_buffer_timer = 0.0
 var coyote_time_timer = 0.0
 var wall_jump_cooldown = 0.0
+var jumps_left := 2
+var isgrounded = true 
 
 @onready var _animated_miffy = %Miffy
 @export var inventory: Inventory
@@ -35,6 +38,7 @@ func _on_detection_area_entered(area: Area2D) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	isgrounded = is_on_floor()
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		coyote_time_timer += delta
