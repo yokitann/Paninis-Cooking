@@ -386,7 +386,7 @@ script = ExtResource("1_o8apw")
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource("1_wva8j")]
 z_index = 1
-position = Vector2(350, 102)
+position = Vector2(351, 102)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 rotation = -7.69786e-05
