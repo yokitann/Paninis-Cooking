@@ -3,13 +3,19 @@ extends Area2D
 #do this to every item to collect
 @export var itemRes: InventoryItem
 
+#do this every item to collect
 func _ready() -> void:
-	play_floating_animation()
+	if GlobalVariables.collected_items.has(name):
+		queue_free()
+	else:
+		play_floating_animation()
 
 #do this every item to collect
 func collect(inventory: Inventory):
-	inventory.insert(itemRes)
-	queue_free()
+		inventory.insert(itemRes)
+		GlobalVariables.add_collected_item(name)  
+		#track item as collected
+		queue_free()
 
 func play_floating_animation() -> void:
 	var tween := create_tween()

@@ -315,11 +315,14 @@ _data = {
 point_count = 5
 
 [node name="Platformer" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_3vvrl")
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource("2_xrqc8")]
 z_index = 10
-position = Vector2(81, 54)
+texture_filter = 1
+position = Vector2(81, 59)
+scale = Vector2(0.9, 0.9)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(9, 9)
@@ -411,9 +414,9 @@ script = ExtResource("8_qdctt")
 
 [node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("9_2prwx")]
 unique_name_in_owner = true
-offset_left = 208.0
+offset_left = 211.0
 offset_top = 2.0
-offset_right = 321.0
+offset_right = 324.0
 offset_bottom = 42.0
 
 [node name="spam" parent="." instance=ExtResource("10_h8o30")]
