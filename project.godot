@@ -20,6 +20,7 @@ TransitionLayer="*res://transition_layer.tscn"
 scene_manager="*res://scene/scene_manager.gd"
 GlobalVariables="*res://GlobalVariables.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+AudioPlayer="*res://audio_stream_player_2d.gd"
 
 [display]
 

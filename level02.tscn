@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://dtr7duarfe8q8"]
+[gd_scene load_steps=18 format=4 uid="uid://dtr7duarfe8q8"]
 
 [ext_resource type="Script" path="res://level_02.gd" id="1_o8apw"]
 [ext_resource type="PackedScene" uid="uid://cpdyfjliwm0em" path="res://platformer_player.tscn" id="1_wva8j"]
@@ -8,6 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://c21tb0ikytk64" path="res://moving_enemy.tscn" id="6_ate5y"]
 [ext_resource type="PackedScene" uid="uid://bpw2gplgefyw8" path="res://massive_spike.tscn" id="7_bv1ef"]
 [ext_resource type="PackedScene" uid="uid://dewouyhspp4xo" path="res://stomp_enemy.tscn" id="8_ynn44"]
+[ext_resource type="Script" path="res://canvas_layer.gd" id="9_khhna"]
+[ext_resource type="PackedScene" uid="uid://bvmpgjyku7uqf" path="res://inventory_gui.tscn" id="10_m6u0h"]
+[ext_resource type="PackedScene" uid="uid://b070rmxksh8xh" path="res://seaweed.tscn" id="11_jyx5j"]
+[ext_resource type="PackedScene" uid="uid://belaspd1ysvup" path="res://rice.tscn" id="12_hrc56"]
+[ext_resource type="AudioStream" uid="uid://bhvqjn3juesrv" path="res://ding-126626.mp3" id="12_ppv1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ax85x"]
 texture = ExtResource("3_nk3w4")
@@ -386,7 +391,7 @@ script = ExtResource("1_o8apw")
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource("1_wva8j")]
 z_index = 1
-position = Vector2(350, 102)
+position = Vector2(402, 95)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 rotation = -7.69786e-05
@@ -395,6 +400,9 @@ tile_set = SubResource("TileSet_x18ap")
 
 [node name="WalkingEnemy" parent="." instance=ExtResource("4_fqlqt")]
 position = Vector2(386, -18)
+
+[node name="Rice2" parent="." instance=ExtResource("12_hrc56")]
+position = Vector2(646, -59)
 
 [node name="Spike" parent="." instance=ExtResource("5_xpwrt")]
 position = Vector2(518, 162)
@@ -447,3 +455,22 @@ position = Vector2(1225, -190)
 [node name="MovingEnemy2" parent="." instance=ExtResource("6_ate5y")]
 position = Vector2(1098, -180)
 curve = SubResource("Curve2D_sc3ny")
+
+[node name="seaweed" parent="." instance=ExtResource("11_jyx5j")]
+position = Vector2(592, 97)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("9_khhna")
+
+[node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("10_m6u0h")]
+unique_name_in_owner = true
+offset_left = 210.0
+offset_top = -1.0
+offset_right = 323.0
+offset_bottom = 39.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-82, -15)
+stream = ExtResource("12_ppv1h")
+volume_db = 10.0

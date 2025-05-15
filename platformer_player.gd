@@ -15,6 +15,7 @@ var coyote_time_timer = 0.0
 var wall_jump_cooldown = 0.0
 
 @onready var _animated_miffy = %Miffy
+@onready var collect_sound = %AudioStreamPlayer2D
 @export var inventory: Inventory
 
 func _ready():
@@ -25,6 +26,7 @@ func _on_detection_area_entered(area: Area2D) -> void:
 		print("yess")
 		area.collect(inventory)
 		print("lol")
+		collect_sound.play()
 	else:
 		print("no")
 
@@ -78,8 +80,15 @@ func _physics_process(delta: float) -> void:
 		_animated_miffy.play("front")
 	else:
 		_animated_miffy.play("run")
-	
 
+	#this is for jump, but the jump animation is off
+	
+	#if velocity.y < 0 and not is_on_floor():
+		#_animated_miffy.play("jump")
+	#elif direction == 0:
+		#_animated_miffy.play("front")
+	#else:
+		#_animated_miffy.play("run")
 
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)
 

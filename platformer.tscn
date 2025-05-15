@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://2e4k7ivukdh8"]
+[gd_scene load_steps=21 format=4 uid="uid://2e4k7ivukdh8"]
 
 [ext_resource type="Script" path="res://Level01.gd" id="1_3vvrl"]
 [ext_resource type="Texture2D" uid="uid://di5hiluyhky2r" path="res://tilemap_packed.png" id="1_e7n4y"]
@@ -11,7 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://bpw2gplgefyw8" path="res://massive_spike.tscn" id="9_bmbqm"]
 [ext_resource type="PackedScene" uid="uid://bwos5yxnj5byo" path="res://spam.tscn" id="10_8tli0"]
 [ext_resource type="Script" path="res://canvas_layer.gd" id="11_j70u8"]
+[ext_resource type="PackedScene" uid="uid://dkdgs0o768e7a" path="res://salmon.tscn" id="11_omapm"]
 [ext_resource type="PackedScene" uid="uid://bvmpgjyku7uqf" path="res://inventory_gui.tscn" id="12_rgr5h"]
+[ext_resource type="AudioStream" uid="uid://bhvqjn3juesrv" path="res://ding-126626.mp3" id="13_66yit"]
+[ext_resource type="PackedScene" uid="uid://belaspd1ysvup" path="res://rice.tscn" id="13_iyiqq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10sqk"]
 texture = ExtResource("1_e7n4y")
@@ -321,7 +324,8 @@ script = ExtResource("1_3vvrl")
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource("2_xrqc8")]
 z_index = 10
-position = Vector2(82, 56)
+position = Vector2(79, 58)
+scale = Vector2(0.9, 0.9)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(9, 9)
@@ -409,13 +413,22 @@ position = Vector2(936, 387)
 position = Vector2(918, 387)
 
 [node name="Door" parent="." instance=ExtResource("8_xng8k")]
-position = Vector2(1045, 287)
+position = Vector2(1043, 303)
 
 [node name="Massive Spike" parent="." instance=ExtResource("9_bmbqm")]
 position = Vector2(451, 579)
 
 [node name="spam" parent="." instance=ExtResource("10_8tli0")]
-position = Vector2(106, 66)
+position = Vector2(848, 177)
+
+[node name="spam2" parent="." instance=ExtResource("10_8tli0")]
+position = Vector2(333, 86)
+
+[node name="salmon" parent="." instance=ExtResource("11_omapm")]
+position = Vector2(262, 107)
+
+[node name="Rice" parent="." instance=ExtResource("13_iyiqq")]
+position = Vector2(494, 65)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("11_j70u8")
@@ -426,3 +439,9 @@ offset_left = 211.0
 offset_top = -1.0
 offset_right = 324.0
 offset_bottom = 39.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-82, -15)
+stream = ExtResource("13_66yit")
+volume_db = 10.0

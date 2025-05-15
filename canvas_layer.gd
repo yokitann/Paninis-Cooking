@@ -3,11 +3,11 @@ extends CanvasLayer
 @onready var inventory = %InventoryGUI
 
 func _ready():
-	inventory.close()
+	inventory.open()
 
 func _input(event):
 	if event.is_action_pressed("toggle_inventory"):
-		if inventory.is_open:
+		if inventory.is_close:
 			inventory.close()
 		else:
 			inventory.open()

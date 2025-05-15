@@ -11,12 +11,12 @@ func update():
 	for i in range(min(inventory.slots.size(), slots.size())):
 		slots[i].update(inventory.slots[i])
 
-var is_open: bool = false
+var is_close: bool = false
 
 func open():
 	visible = true
-	is_open = true
+	is_close = true
 
 func close():
 	visible = false 
-	is_open = false
+	is_close = false

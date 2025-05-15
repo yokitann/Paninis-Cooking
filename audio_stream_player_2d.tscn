@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkdcd4ttv4an0"]
+
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="2_sxya6"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+script = ExtResource("2_sxya6")

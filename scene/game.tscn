@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3l6dvlqhhk70"]
+[gd_scene load_steps=19 format=3 uid="uid://b3l6dvlqhhk70"]
 
 [ext_resource type="Texture2D" uid="uid://bcheowl4ynmo1" path="res://Image/TilesetFloor.png" id="1_4x3wh"]
 [ext_resource type="Script" path="res://scene/game.gd" id="1_n77e7"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://brhye2vq7cjyr" path="res://story_player_miffy.tscn" id="8_2vk81"]
 [ext_resource type="Script" path="res://camera_2d.gd" id="9_r67n2"]
 [ext_resource type="PackedScene" uid="uid://7iordu41u1en" path="res://scene/trigger.tscn" id="10_yg6oh"]
+[ext_resource type="PackedScene" uid="uid://daq0icyjex4oe" path="res://transition.tscn" id="11_xxmqh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ui7yc"]
 texture = ExtResource("1_4x3wh")
@@ -929,6 +930,7 @@ texture = ExtResource("5_c2a16")
 25:0/0 = 0
 26:0/size_in_atlas = Vector2i(3, 3)
 26:0/0 = 0
+26:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.59099, -22.8042, -22.4506, -12.5511, -22.4506, 21.0364, -8.48528, 22.0971, -8, 8, 8, 8, 8.13173, 22.6274, 21.39, 22.4506, 21.9203, 9.19239, 23.1577, -11.1369, 3.53553, -22.6274)
 31:0/0 = 0
 32:0/0 = 0
 0:1/0 = 0
@@ -1555,8 +1557,8 @@ sources/4 = SubResource("TileSetAtlasSource_til3p")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yryv0"]
 size = Vector2(12, 17)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrddx"]
-size = Vector2(17, 15)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xk5k0"]
+size = Vector2(16, 15)
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -1591,15 +1593,6 @@ z_index = 2
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_yryv0")
 
-[node name="Trigger2" parent="." instance=ExtResource("10_yg6oh")]
-position = Vector2(493, 70)
-connected_scene = "platformer"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger2"]
-z_index = 2
-position = Vector2(74.5, 0.5)
-shape = SubResource("RectangleShape2D_rrddx")
-
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("tilemap")]
 unique_name_in_owner = true
 position = Vector2(430, 80)
@@ -1615,3 +1608,11 @@ tilemap = NodePath("../TileMap")
 
 [node name="House" type="Marker2D" parent="EntranceSpawn"]
 position = Vector2(493, 104)
+
+[node name="transition" parent="." instance=ExtResource("11_xxmqh")]
+position = Vector2(570, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="transition"]
+z_index = 1
+position = Vector2(-2, -12)
+shape = SubResource("RectangleShape2D_xk5k0")
