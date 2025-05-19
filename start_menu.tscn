@@ -1,20 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://giuvgy63u3b"]
+[gd_scene load_steps=4 format=3 uid="uid://giuvgy63u3b"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_ltucy"]
-[ext_resource type="Texture2D" uid="uid://cyvg6k4jr45k7" path="res://Image/playnowbutton.png" id="2_bw7y4"]
-[ext_resource type="Texture2D" uid="uid://tpak2g5y2nq5" path="res://Image/quitbutton.png" id="3_u7qnc"]
 
-[sub_resource type="Theme" id="Theme_rqwai"]
-default_font_size = 50
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r6cn"]
+bg_color = Color(0.568627, 0.607843, 1, 1)
 
-[sub_resource type="Theme" id="Theme_dry5q"]
-default_font_size = 50
-
-[sub_resource type="Theme" id="Theme_3dmgh"]
-default_font_size = 50
-
-[sub_resource type="Theme" id="Theme_kpb4o"]
-default_font_size = 50
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55c7n"]
+bg_color = Color(0.423529, 0.6, 0.87451, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.637843, 0.637843, 0.637843, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -23,88 +22,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 6
+size_flags_vertical = 6
 script = ExtResource("1_ltucy")
 
-[node name="PlayButton" type="TextureButton" parent="."]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1.0
-offset_top = 14.0
-offset_right = 101.0
-offset_bottom = 114.0
-scale = Vector2(1.4, 1.4)
-texture_normal = ExtResource("2_bw7y4")
-
-[node name="QuitButton" type="TextureButton" parent="."]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = -36.0
-offset_top = 25.0
-offset_right = 64.0
-offset_bottom = 125.0
-scale = Vector2(1.4, 1.4)
-texture_normal = ExtResource("3_u7qnc")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -72.0
-offset_right = 325.0
-offset_bottom = 72.0
-grow_vertical = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Title" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_rqwai")
-text = "Panini's Cooking
-"
-
-[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-theme = SubResource("Theme_dry5q")
-text = "Start Game "
-
-[node name="EndGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_3dmgh")
-text = "End Game
-"
-
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -201.5
-offset_top = 20.0
-offset_right = 201.5
-offset_bottom = 97.0
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -32.0
+offset_right = 62.0
+offset_bottom = 32.0
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 9
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer2"]
+[node name="StartGame" type="Button" parent="GridContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/hover = SubResource("StyleBoxFlat_3r6cn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_55c7n")
+text = "Start Game
+"
 
-[node name="Title" type="Button" parent="MarginContainer2/CenterContainer"]
-unique_name_in_owner = true
-visible = false
+[node name="Quit" type="Button" parent="GridContainer"]
 layout_mode = 2
-theme = SubResource("Theme_kpb4o")
-text = "Panini's Cooking"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_55c7n")
+text = "Quit
+"
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/EndGameButton" to="." method="_on_end_game_button_pressed"]
+[connection signal="pressed" from="GridContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]

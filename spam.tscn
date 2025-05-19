@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwos5yxnj5byo"]
+[gd_scene load_steps=5 format=3 uid="uid://oyxefoh7vx07"]
 
 [ext_resource type="Script" path="res://spam.gd" id="1_38la6"]
-[ext_resource type="Resource" uid="uid://bqwdpb020f2ox" path="res://spam.tres" id="2_17lpn"]
+[ext_resource type="Resource" uid="uid://bnk6lc6q46g5d" path="res://spam.tres" id="2_17lpn"]
 [ext_resource type="Texture2D" uid="uid://cr8q7d6p4cxy0" path="res://Image/fixed_spam.png" id="3_fxglr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xte0o"]

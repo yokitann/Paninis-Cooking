@@ -1,24 +1,9 @@
-class_name Startmenu extends Control
+extends Control
 
-@onready var start_game_button = %StartGameButton
-@onready var play_button = %PlayButton
-@onready var quit_button = %QuitButton
-@onready var title = %Title
-
-
-
-func _ready():
-	play_button.grab_focus()
-
-func _on_start_game_button_pressed():
-	get_tree().change_scene_to_file("res://game.tscn")
-
-func _on_end_game_button_pressed():
-	get_tree().quit()
-
-
-func _on_play_button_pressed() -> void:
+func _on_start_game_pressed() -> void:
+	print("start")
 	get_tree().change_scene_to_file("res://scene/game.tscn")
 
-func _on_quit_button_pressed() -> void:
+func _on_quit_pressed() -> void:
+	print("quit")
 	get_tree().quit()

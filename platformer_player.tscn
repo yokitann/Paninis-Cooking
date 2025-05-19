@@ -1,8 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://cpdyfjliwm0em"]
+[gd_scene load_steps=25 format=3 uid="uid://bd05gduiaqqaq"]
 
 [ext_resource type="Script" path="res://platformer_player.gd" id="1_xqba4"]
 [ext_resource type="Texture2D" uid="uid://btkxegf0dom6d" path="res://Image/Miffy_back.png" id="2_v7pby"]
-[ext_resource type="Resource" uid="uid://difx5b6xbjwne" path="res://player_inventory.tres" id="2_wqdc8"]
+[ext_resource type="Resource" uid="uid://b0b01laytcxss" path="res://player_inventory.tres" id="2_wqdc8"]
 [ext_resource type="Texture2D" uid="uid://cn4t01yamrmfr" path="res://Image/Miffy_front.png" id="3_akkr4"]
 [ext_resource type="Texture2D" uid="uid://1h4ggvq1ncdq" path="res://Image/Miffy_right 2.png" id="4_eu62w"]
 [ext_resource type="Texture2D" uid="uid://b84lsxyhr3rxu" path="res://Image/Miffy_jump-Sheet.png" id="5_sj8yj"]
@@ -115,7 +115,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -155,7 +155,7 @@ position = Vector2(0, -9)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_s4u46")
 animation = &"jump"
-frame_progress = 0.261941
+frame_progress = 0.938833
 
 [node name="Detection" type="Area2D" parent="."]
 unique_name_in_owner = true

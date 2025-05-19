@@ -76,19 +76,19 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0:
 		_animated_miffy.flip_h = true
 
-	if direction == 0:
-		_animated_miffy.play("front")
-	else:
-		_animated_miffy.play("run")
-
-	#this is for jump, but the jump animation is off
-	
-	#if velocity.y < 0 and not is_on_floor():
-		#_animated_miffy.play("jump")
-	#elif direction == 0:
+	#if direction == 0:
 		#_animated_miffy.play("front")
 	#else:
 		#_animated_miffy.play("run")
+
+	#this is for jump, but the jump animation is off
+	
+	if velocity.y < 0: #and not is_on_floor():
+		_animated_miffy.play("jump")
+	elif direction == 0:
+		_animated_miffy.play("front")
+	else:
+		_animated_miffy.play("run")
 
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)
 

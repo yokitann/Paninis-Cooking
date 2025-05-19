@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b070rmxksh8xh"]
+[gd_scene load_steps=5 format=3 uid="uid://c4xj6c76mv28p"]
 
 [ext_resource type="Script" path="res://seaweed.gd" id="1_38617"]
 [ext_resource type="Texture2D" uid="uid://d3xtrrigewdpj" path="res://Image/seaweed.png" id="1_k3xda"]
-[ext_resource type="Resource" uid="uid://cyot26738fbq5" path="res://seaweed.tres" id="2_qdtmx"]
+[ext_resource type="Resource" path="res://seaweed.tres" id="2_qdtmx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xg3y0"]
 radius = 6.08276
