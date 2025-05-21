@@ -4,13 +4,16 @@ extends Control
 @onready var slots: Array = %BoxContainer.get_children()
 
 func _ready():
-	inventory.updated.connect(update)
-	update()
+	 # connect the inventory's update signal to refresh the UI
+	inventory.updated.connect(update) 
+	update() 
 
 func update():
 	for i in range(min(inventory.slots.size(), slots.size())):
 		slots[i].update(inventory.slots[i])
+		# set each UI slot to match the inventory data
 
+#toggl
 var is_close: bool = false
 
 func open():

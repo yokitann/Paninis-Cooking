@@ -4,8 +4,9 @@ extends Area2D
 @export var itemRes: InventoryItem
 
 func _ready() -> void:
+	#check if this item has already been collected using its name 
 	if GlobalVariables.collected_items.has(name):
-		queue_free()
+		queue_free() #floating animation if not yet collected
 	else:
 		play_floating_animation()
 
@@ -16,6 +17,7 @@ func collect(inventory: Inventory):
 		#track item as collected
 		queue_free()
 
+#animation for item
 func play_floating_animation() -> void:
 	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_SINE)
