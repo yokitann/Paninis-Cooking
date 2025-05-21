@@ -9,16 +9,25 @@ Nathan: Here are some choices.
 - End the conversation => END
 Nathan: For more information see the online documentation.
 ~ start
-Remy: Hello! My name is Remy, the rat!
-Miffy: I need help! Can you teach me how to cook?
-Remy: Of course! What's your name?
-Miffy: My name is Miffy! 
-Remy: [[Nice name!|I love your name!|Cool name!]] I can be your chef guide. 
-Remy: Are you ready? 
-- Yes!
+A Rat: ...Who are you? You lost? 
+Miffy: No. I’m looking for you. Are you Remy? The former Michelin-starred chef...
+Remy: Not anymore. Go home.
+Miffy: Please, I’ve come a long way.
+Miffy: I’ve read everything about you. Your recipes...your legacy...
+Miffy: You were my inspiration.
+Remy: Then pick a better one. I’m done with kitchen. Go away. 
+Miffy: I’m not. I want to learn. Cooking has always been my dream, but I’ve never had the chance.
+Remy: Fine...Now listen carefully. 
+Remy: You will first gather ingredients. You can do this by going to the NEXT HOUSE. 
+Remy: You need to gather 1 SALMON, 1 SEAWEED, 2 RICE, AND 2 SPAM...to make...SUSHI
+Remy: Do you understand? 
+- No...Can you repeat that?
+	Remy: Fine...Now listen carefully. I will repeat ONLY ONCE MORE!!!!
+	Remy: You will first gather ingredients. You can do this by going to the NEXT HOUSE. 
+	Remy: You need to gather 1 SALMON, 1 SEAWEED, 2 RICE, AND 2 SPAM...to make...SUSHI
+	Remy: You're ready now...GO! BYE!
+- Yes! I'm ready!
 	Remy: Alright! Let's goooo!
-- I need more time...
-	Remy: That's okay! Bye bye!
 	=> END
 	=> END
 => END

@@ -2,7 +2,7 @@ extends Area2D
 
 @export var target_scene: PackedScene  
 @onready var transition = get_node("/root/TransitionLayer")
-@onready var sound = preload("res://whoosh-313320.mp3")
+@onready var sound = preload("res://sound/whoosh-313320.mp3")
 
 func _on_body_entered(body: Node):
 	if body is Player:  

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" path="res://story_player_miffy.tscn" id="8_2vk81"]
 [ext_resource type="Script" path="res://camera_2d.gd" id="9_r67n2"]
 [ext_resource type="PackedScene" uid="uid://7iordu41u1en" path="res://scene/trigger.tscn" id="10_yg6oh"]
-[ext_resource type="PackedScene" path="res://transition.tscn" id="11_xxmqh"]
+[ext_resource type="PackedScene" uid="uid://daq0icyjex4oe" path="res://transition.tscn" id="11_xxmqh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ui7yc"]
 texture = ExtResource("1_4x3wh")
@@ -1566,7 +1566,7 @@ script = ExtResource("1_n77e7")
 
 [node name="StoryPlayerMiffy" parent="." instance=ExtResource("8_2vk81")]
 unique_name_in_owner = true
-position = Vector2(543, 109)
+position = Vector2(124, 130)
 scale = Vector2(0.7, 0.7)
 collision_layer = 265
 

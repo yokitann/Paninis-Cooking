@@ -16,6 +16,8 @@ var wall_jump_cooldown = 0.0
 
 @onready var _animated_miffy = %Miffy
 @onready var collect_sound = %AudioStreamPlayer2D
+@onready var jump_sound = %JumpSound
+@onready var death_sound = %DeathSound
 @export var inventory: Inventory
 
 func _ready():
@@ -59,16 +61,20 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		jump_buffer_timer = 0
 		coyote_time_timer = 0
+		jump_sound.play()
 	elif on_wall and jump_buffer_timer > 0 and wall_jump_cooldown <= 0:
 		velocity.y = WALL_JUMP_FORCE.y
 		velocity.x = wall_normal.x * WALL_JUMP_FORCE.x
 		wall_jump_cooldown = WALL_JUMP_TIME
 		double_jump = 1
 		jump_buffer_timer = 0
+		jump_sound.play()
 	elif not is_on_floor() and jump_buffer_timer > 0 and double_jump > 0:
 		velocity.y = DOUBLE_JUMP_VELOCITY
 		double_jump -= 1
 		jump_buffer_timer = 0
+		jump_sound.play()
+
 
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction > 0:
@@ -76,13 +82,12 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0:
 		_animated_miffy.flip_h = true
 
+	#ignore 
 	#if direction == 0:
 		#_animated_miffy.play("front")
 	#else:
 		#_animated_miffy.play("run")
 
-	#this is for jump, but the jump animation is off
-	
 	if velocity.y < 0: #and not is_on_floor():
 		_animated_miffy.play("jump")
 	elif direction == 0:
@@ -93,3 +98,4 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	

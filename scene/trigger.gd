@@ -2,7 +2,7 @@ class_name Trigger extends Area2D
 
 var story_player = Player
 @export var connected_scene : String
-@onready var sound = preload("res://whoosh-313320.mp3")
+@onready var sound = preload("res://sound/whoosh-313320.mp3")
 
 func _on_body_entered(body) -> void:
 	if body is Player:
